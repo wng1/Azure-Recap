@@ -1,0 +1,43 @@
+https://learn.microsoft.com/en-gb/training/paths/work-with-relational-data-in-azure/
+
+Azure SQL DB -  
+1) Host on premise
+2) host on cloud
+
+setting up a VM or physical requires you to know about hardware and software requirements. Also latest security best practices and manage operating system and SQL server patches on a routine basis. You also need to manage backup and data retention issues yourself.
+
+Cost, no systems to buy, provide power for or otherwise maintain. 
+Scale, can adjust the performance and size of your database accordingly.
+Security, comes with firewall restricting connection to the inernet and allow specific IP address you trust.
+AZL SQL DB requires Azure SQL logical server, administrative container, logins, firewall rules, security policies through logical server. 
+DTU - Database Transaction UNit 
+vCores - Virtual Cores
+SQL (elastic pool)
+Using the commands, you can check if the db exists or not and also other dbs.
+az sql db list
+az sql db list | jq '[.[] | {name: .name}]'
+Then you want to check if it is online or not
+az sql db show --name Logistics
+az sql db show --name Logistics | jq '{name: .name, maxSizeBytes: .maxSizeBytes, status: .status}'
+https://learn.microsoft.com/en-gb/training/modules/provision-azure-sql-db/4-connect-add-data
+https://learn.microsoft.com/en-gb/training/modules/provision-azure-sql-db/3-create-your-database
+---------------
+Scale multiple Azure SQL databases that have varying and unpredictable resource requirements.
+Create an elastic pool
+az sql elastic-pools create  (Azure CLI)
+New-AzSqlElasticPool (Powershell)
+
+az sql db create --elastic-pool-name
+New-AzSqlDatabase
+Set-AzSqlDatabase
+https://learn.microsoft.com/en-gb/training/modules/scale-sql-databases-elastic-pools/3-exercise-create-elastic-pool
+DTU-based pricing model   VS  vCore-based pricing model
+https://learn.microsoft.com/en-gb/training/modules/scale-sql-databases-elastic-pools/4-manage-elastic-pools
+https://learn.microsoft.com/en-us/sql/dma/dma-sku-recommend-sql-db
+Secure your Azure SQL database
+https://learn.microsoft.com/en-gb/training/modules/secure-your-azure-sql-database/
+Businesses have closed due to financial damage or ruined reputations. Customers have had their data accessed unlawfully because of security breaches exposing their personal details, and again possibly causing financial harm.
+Security
+Protect data at transit and rest
+ 
+https://learn.microsoft.com/en-gb/training/modules/secure-your-azure-sql-database/2-restrict-network-access
