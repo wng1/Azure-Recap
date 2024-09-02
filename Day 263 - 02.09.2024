@@ -1,0 +1,7 @@
+https://learn.microsoft.com/en-gb/training/modules/manage-data-privacy-and-governance-with-azure-databricks/03-manage-access-controls
+
+Regularly Review Policies: Data access needs can change, so regularly review and update your access policies to ensure they still meet your security requirements.
+
+Educate Users: Make sure that all users understand the importance of data governance and how to use the Unity Catalog safely and effectively.
+
+By carefully setting up and managing access controls with Azure Databricks' Unity Catalog, you can ensure that your data assets are well-governed, secure, and accessible to the right users under the right conditions.
